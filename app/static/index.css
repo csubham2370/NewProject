@@ -1,0 +1,25 @@
+.div2 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.div1 {
+    text-align: center;
+    
+    
+    background-color: aqua;
+    padding:6px;
+    border-radius: 1rem;
+}
+
+button{
+
+    background-color: rgb(115, 225, 115);
+    border-radius: 2rem;
+    padding:6px;
+
+}

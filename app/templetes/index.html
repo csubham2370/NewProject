@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock title %}
+
+{% block head %}
+
+{% load static %}
+<link rel="stylesheet" href='{% static "index.css" %}'>
+
+<script>
+
+
+
+    // Disable the back button
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
+    // Example function for logging out
+    function logout() {
+        // Perform logout actions
+
+        // Redirect to a logout page or perform other logout logic
+        window.location.replace("{% url "logout" %}");
+    }
+
+  </script>
+
+{% endblock head %}
+   
+{% block body %}
+
+<div class="div2">
+    <div class="div1">
+        <h2>Welcome to the Index Page</h2>
+        <h3>The name of the user is {{ request.user }} </h3>
+        <p>If the user is not logged in, you may want to provide links to the <a href="/login/">login</a> or <a href="/signup/">signup</a> pages.</p>
+        <p>If the user is logged in, you can display personalized content or a logout option.</p>
+        <button type="submit" onclick="logout()">Logout</button>
+    </div>
+</div>
+ {% endblock body %}
