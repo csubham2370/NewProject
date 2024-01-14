@@ -75,17 +75,17 @@ WSGI_APPLICATION = 'NewProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 #Vercel Postgres server
-# DATABASES = {
-#     'default': dj_database_url.config(default='postgres://default:6j7fENOJKWLI@ep-snowy-wave-10814893.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb')
-# }
+DATABASES = {
+    'default': dj_database_url.config(default='postgres://default:6j7fENOJKWLI@ep-snowy-wave-10814893.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb')
+}
 
 
 
